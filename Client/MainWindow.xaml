@@ -1,0 +1,149 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="380"
+        MouseMove="Window_MouseMove"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        >
+    <!-- KÉSZ-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="15" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#87CEEB" Offset="0.0"/>
+                    <GradientStop Color="#4169E1" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Center">
+            <Image Source="C:\Users\Károly Róbert\Desktop\tavk_main\Client\Client\images\login_top.png" Width="80" Margin="0 0 0 0"/>
+            <TextBlock Text="Messenger"
+                       Foreground="black"
+                       FontSize="24"
+                       FontFamily="Helvetica"
+                       FontWeight="Medium"
+                       HorizontalAlignment="Center"
+                       />
+        </StackPanel>
+        <!-- masodik sor-->
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                    FontFamily="Helvetica"
+                    FontWeight="Light"
+                    FontSize="22"
+                    Text=""
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Width="230"
+                    Height="25"
+                    Opacity="0.5"
+                    Margin="66 0 0 0"
+                    x:Name="textBox1"
+                    />
+                <Image Source="C:\Users\Károly Róbert\Desktop\tavk_main\Client\Client\images\account2.png" Width="25"/>
+            </StackPanel>
+
+            <Border Width="255"
+                    Height="3"
+                    Background="Black"
+                    Opacity="0.5"
+                    />
+
+            <StackPanel Orientation="Horizontal">
+                <PasswordBox
+                    FontFamily="Helvetica"
+                    FontWeight="Light"
+                    FontSize="22"
+                    Password=""
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Width="230"
+                    Height="25"
+                    Opacity="0.5"
+                    Margin="66 0 0 0"
+                    x:Name="textBox3"
+                    />
+                <Image Source="C:\Users\Károly Róbert\Desktop\tavk_main\Client\Client\images\password.png" Width="25"/>
+            </StackPanel>
+            <Border Width="255"
+                    Height="3"
+                    Background="Black"
+                    Opacity="0.5"
+                    />
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                    FontFamily="Helvetica"
+                    FontWeight="Light"
+                    FontSize="22"
+                    Text=""
+                    Background="Transparent"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Width="230"
+                    Height="25"
+                    Opacity="0.5"
+                    Margin="66 0 0 0"
+                    x:Name="textBox2"
+                    />
+                <Image Source="C:\Users\Károly Róbert\Desktop\tavk_main\Client\Client\images\ip.png" Width="25"/>
+            </StackPanel>
+
+
+            <Border Width="255"
+                    Height="3"
+                    Background="Black"
+                    Opacity="0.5"
+                    />
+            <StackPanel Orientation="Horizontal" Margin="66 50" >
+                <Button 
+                    x:Name="button1"
+                    Content="LOGIN"
+                    Width="70"
+                    Height="40"
+                    Margin="0 0 20 0"
+                    Click="button1_Click"
+                    />
+                <Button 
+                    Content="REGISTER"
+                    Width="70"
+                    Height="40"
+                    Name="button3"
+                    Margin="0 0 20 0"
+                    Click="button3_Click"
+
+                    />
+                <Button 
+                    Content="CANCEL"
+                    Name="button2"
+                    Width="70"
+                    Height="40"
+                    Click="btnCancel_Click"
+                    />
+            </StackPanel>
+        </StackPanel>
+        <Label
+            Content="Regisztrálva a chat programunkba"
+            Height="28"
+            HorizontalAlignment="Left"
+            Margin="20,268,0,0"
+            x:Name = "label5"
+            Visibility="Hidden"
+            VerticalAlignment="Top"
+            Width="200"
+        />
+    </Grid>
+</Window>
